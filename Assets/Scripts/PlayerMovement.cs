@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public float speed;
-    private Rigidbody2D playerRigidBody;
-    private Vector3 change;
+    public Camera camera;
+
+    private Vector2 movement;
+    private Vector2 mousePos;
     private Animator animator;
+    private Rigidbody2D playerRigidBody;
 
     // Start is called before the first frame update
     void Start() {
@@ -17,24 +20,17 @@ public class PlayerMovement : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        change = Vector3.zero;
-        change.x = Input.GetAxisRaw("Horizontal");
-        change.y = Input.GetAxisRaw("Vertical");
-        UpdateAnimationAndMove();
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+
+        mousePos = camera.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    void UpdateAnimationAndMove() {
-        if (change != Vector3.zero) {
-            MoveCharacter();
-            animator.SetFloat("moveX", change.x);
-            animator.SetFloat("moveY", change.y);
-            animator.SetBool("moving", true);
-        } else {
-            animator.SetBool("moving", false);
-        }
-    }
+    void FixedUpdate() {
+        playerRigidBody.MovePosition(playerRigidBody.position + movement * speed * Time.fixedDeltaTime);
 
-    void MoveCharacter() {
-        playerRigidBody.MovePosition(transform.position + change * speed * Time.deltaTime);
+        Vector2 lookDir = mousePos - playerRigidBody.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+        playerRigidBody.rotation = angle;
     }
 }
