@@ -48,6 +48,7 @@ public class ZombieHandler : MonoBehaviour {
     void HandleBulletCollision(Collision2D col) {
         healthBar.healthSystem.Damage(10.0f);
         if (healthBar.healthSystem.GetHealth() == 0.0f) {
+            Hud.kills += 1;
             Destroy(gameObject);
         }
     } 

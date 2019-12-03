@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
+    <Compile Include="Assets\Scripts\Pontuacao.cs" />
     <Compile Include="Assets\Scripts\ZombieHandler.cs" />
     <Compile Include="Assets\Scripts\ZombieMovment.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

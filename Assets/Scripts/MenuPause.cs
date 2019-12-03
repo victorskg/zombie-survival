@@ -2,25 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuPause : MonoBehaviour
 {
     public GameObject menuPauseUi;
+    public Button retomar;
+    public Button reiniciar;
+    public Button sair;
+
     private static bool gameIsPaused = false;
-    // Start is called before the first frame update
+    
     void Start()
     {
-
+        retomar.onClick.AddListener(Resume);
+        reiniciar.onClick.AddListener(reiniciarGame);
+        sair.onClick.AddListener(sairParaMenu);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)
             {
-                resume();
+                Resume();
             }
             else
             {
@@ -28,7 +34,7 @@ public class MenuPause : MonoBehaviour
             }
         }
     }
-    public void resume()
+    public void Resume()
     {
         menuPauseUi.SetActive(false);
         Time.timeScale = 1f;
@@ -45,12 +51,13 @@ public class MenuPause : MonoBehaviour
     public void sairParaMenu()
     {
         SceneManager.LoadScene("Interface");
-        resume();
+        Resume();
     }
 
     public void reiniciarGame()
     {
         SceneManager.LoadScene("SampleScene");
-        resume();
+        Hud.kills = 0;
+        Resume();
     }
 }
