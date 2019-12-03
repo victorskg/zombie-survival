@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\script.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
@@ -68,10 +69,9 @@
     <Compile Include="Assets\Scripts\Hud.cs" />
     <Compile Include="Assets\Scripts\Interface.cs" />
     <Compile Include="Assets\Scripts\MenuPause.cs" />
-    <Compile Include="Assets\Scripts\PlayerLife.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
-    <Compile Include="Assets\Scripts\ZombieAttack.cs" />
     <Compile Include="Assets\Scripts\ZombieHandler.cs" />
     <Compile Include="Assets\Scripts\ZombieMovment.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

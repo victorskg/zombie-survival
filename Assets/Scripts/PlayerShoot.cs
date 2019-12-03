@@ -8,12 +8,10 @@ public class PlayerShoot : MonoBehaviour {
     public GameObject bulletPrefab;
     public float bulletForce = 20f;
 
-    private Animator animator;
     private Vector3 lastDirection;
     private Vector3 bulletDirection;
 
     void Start() {
-        animator = GetComponent<Animator>();
         lastDirection = new Vector3(-1, 0, 0);
     }
 
@@ -22,13 +20,10 @@ public class PlayerShoot : MonoBehaviour {
         UpdateBulletDirection();
         if (Input.GetButtonDown("Fire1")) {
             Shoot();
-        } else {
-            animator.SetBool("shooting", false);
         }
     }
 
     void Shoot() {
-        animator.SetBool("shooting", true);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
