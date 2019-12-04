@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - zombiePrefab: {fileID: 4092338829486991840, guid: 6761f71d5c2e96642901f6c73d2cf923,
       type: 3}
+  - cursorTexture: {fileID: 2800000, guid: 6b0ce184fd9c2434798ce88af9756f04, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
