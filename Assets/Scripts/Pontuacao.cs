@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Pontuacao : MonoBehaviour
 {
     public Button sair;
+    public Button creditos;
     public Text tempoText;
     public Text killsText;
     public static float tempo;
@@ -15,6 +16,7 @@ public class Pontuacao : MonoBehaviour
     void Start()
     {
         sair.onClick.AddListener(SairParaMenuPrincipal);
+        creditos.onClick.AddListener(irParaCreditos);
         tempoText.text = "Tempo de missão: " + tempo.ToString("F0") + "s"; ;
         killsText.text = "Inimigos eliminados: " + kills;
     }
@@ -28,5 +30,11 @@ public class Pontuacao : MonoBehaviour
     {
         Hud.kills = 0;
         SceneManager.LoadScene("Interface");
+    }
+
+    void irParaCreditos()
+    {
+        Hud.kills = 0;
+        SceneManager.LoadScene("Creditos");
     }
 }

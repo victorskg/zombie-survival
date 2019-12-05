@@ -10,9 +10,12 @@ public class PlayerShoot : MonoBehaviour {
 
     private Vector3 lastDirection;
     private Vector3 bulletDirection;
+    private AudioSource shootSource;
 
     void Start() {
         lastDirection = new Vector3(-1, 0, 0);
+        shootSource = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+     
     }
 
     // Update is called once per frame
@@ -27,6 +30,7 @@ public class PlayerShoot : MonoBehaviour {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.right * bulletForce, ForceMode2D.Impulse);
+        shootSource.Play();
     }
 
     void UpdateBulletDirection() {

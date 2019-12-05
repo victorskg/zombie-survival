@@ -29,7 +29,7 @@ public class GameController : MonoBehaviour {
 
     void NextWave() {
         for (int i = 0; i < currentWave + zombieIncrement; i++) {
-            Instantiate(zombiePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            Instantiate(zombiePrefab, new Vector3(0, 0, 0), Quaternion.identity);;
         }
     }
 }
