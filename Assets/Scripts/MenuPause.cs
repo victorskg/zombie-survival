@@ -60,6 +60,7 @@ public class MenuPause : MonoBehaviour
     public void sairParaMenu()
     {
         SceneManager.LoadScene("Interface");
+        Hud.kills = 0;
         Resume();
     }
 

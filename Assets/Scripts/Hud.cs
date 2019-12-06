@@ -9,8 +9,8 @@ public class Hud : MonoBehaviour {
     public Sprite[] bar;
     public Text killsText;
     public Text cronometro;
+    public Image healtbar;
 
-    private Image healtbar;
     private float timer = 0f;
     private PlayerHealth playerHealth;
 
@@ -18,7 +18,6 @@ public class Hud : MonoBehaviour {
 
     void Start() {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
-        healtbar = GameObject.FindGameObjectWithTag("Hud").GetComponentInChildren<Image>();
     }
 
     void Update() {
