@@ -11,10 +11,15 @@ public class MenuPause : MonoBehaviour
     public Button reiniciar;
     public Button sair;
 
+    private AudioSource playerAudio;
+    private AudioSource zombieAudio;
+
     private static bool gameIsPaused = false;
     
     void Start()
     {
+        playerAudio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+        zombieAudio = GameObject.FindGameObjectWithTag("GameController").GetComponent<AudioSource>();
         retomar.onClick.AddListener(Resume);
         reiniciar.onClick.AddListener(reiniciarGame);
         sair.onClick.AddListener(sairParaMenu);
@@ -38,6 +43,8 @@ public class MenuPause : MonoBehaviour
     {
         menuPauseUi.SetActive(false);
         Time.timeScale = 1f;
+        zombieAudio.mute = false;
+        playerAudio.mute = false;
         gameIsPaused = false;
     }
 
@@ -45,6 +52,8 @@ public class MenuPause : MonoBehaviour
     {
         menuPauseUi.SetActive(true);
         Time.timeScale = 0f;
+        playerAudio.mute = true;
+        zombieAudio.mute = true;
         gameIsPaused = true;
     }
 

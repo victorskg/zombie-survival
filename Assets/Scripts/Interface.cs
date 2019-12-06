@@ -2,20 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class Interface : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button iniciar;
+    public Button creditos;
+
     void Start()
     {
-        
+        iniciar.onClick.AddListener(StartGame);
+        creditos.onClick.AddListener(Creditos);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
+    }
+
+    void StartGame()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    void Creditos()
+    {
+        SceneManager.LoadScene("Creditos");
     }
 }
