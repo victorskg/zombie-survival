@@ -338,7 +338,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sair
+  m_Text: 'Inicio
 
 '
 --- !u!222 &369710021
@@ -794,7 +794,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: 54}
+  m_AnchoredPosition: {x: 13, y: 72}
   m_SizeDelta: {x: 379.2, y: 59.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392315654
@@ -873,7 +873,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -56}
+  m_AnchoredPosition: {x: 0, y: -64}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502272911
