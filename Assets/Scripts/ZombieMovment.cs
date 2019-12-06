@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ZombieMovment : MonoBehaviour
 {
-    public float speed = 2f;
-    private Rigidbody2D myRigidbody;
+    private float speed = 2f;
     private Transform player;
     private Vector2 movement;
+    private Rigidbody2D myRigidbody;
 
     void Start()
     {

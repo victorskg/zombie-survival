@@ -21,6 +21,5 @@ public class Creditos : MonoBehaviour
     void SairParaMenu()
     {
         SceneManager.LoadScene("Interface");
-        Debug.Log("asdaf");
     }
 }

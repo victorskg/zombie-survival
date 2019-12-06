@@ -18,7 +18,7 @@ public class Pontuacao : MonoBehaviour
         sair.onClick.AddListener(SairParaMenuPrincipal);
         creditos.onClick.AddListener(irParaCreditos);
         tempoText.text = "Tempo de missão: " + tempo.ToString("F0") + "s"; ;
-        killsText.text = "Inimigos eliminados: " + kills;
+        killsText.text = "Zumbis eliminados: " + kills;
     }
 
     void Update()

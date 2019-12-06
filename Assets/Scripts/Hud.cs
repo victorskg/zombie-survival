@@ -29,7 +29,7 @@ public class Hud : MonoBehaviour {
         }
         timer += Time.deltaTime;
         healtbar.sprite = bar[playerHealth.GetHealth() / playerHealth.GetDamage()];
-        cronometro.text = "Tempo decorrido: " + timer.ToString("F0") + "s";
-        killsText.text = "Inimigos eliminados: " + kills;
+        cronometro.text = "Tempo de missão: " + timer.ToString("F0") + "s";
+        killsText.text = "Zumbis eliminados: " + kills;
     }
 }

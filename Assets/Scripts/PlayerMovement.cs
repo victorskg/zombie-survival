@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    public float speed;
     public Camera camera;
 
+    private float speed;
     private Vector2 movement;
     private Vector2 mousePos;
     private Animator animator;
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
+        speed = 4f;
         animator = GetComponent<Animator>();
         playerRigidBody = GetComponent<Rigidbody2D>();
     }
