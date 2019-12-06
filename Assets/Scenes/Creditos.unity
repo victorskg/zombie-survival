@@ -647,7 +647,7 @@ GameObject:
   - component: {fileID: 1112323460}
   - component: {fileID: 1112323459}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Inicio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -703,7 +703,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sair
+  m_Text: 'Inicio
 
 '
 --- !u!222 &1112323460

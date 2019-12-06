@@ -7,17 +7,18 @@ using UnityEngine.SceneManagement;
 public class Hud : MonoBehaviour {
 
     public Sprite[] bar;
-    private Image healtbar;
-    private Text cronometro;
     public Text killsText;
+    public Text cronometro;
+
+    private Image healtbar;
     private float timer = 0f;
     private PlayerHealth playerHealth;
+
     public static int kills = 0;
 
     void Start() {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         healtbar = GameObject.FindGameObjectWithTag("Hud").GetComponentInChildren<Image>();
-        cronometro = GameObject.FindGameObjectWithTag("Hud").GetComponentInChildren<Text>();
     }
 
     void Update() {
